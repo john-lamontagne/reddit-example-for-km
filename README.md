@@ -14,7 +14,7 @@ The aim of this project is to provide basic examples of various concepts such as
 
 There is no styling of the front end, it is all about handling data within the React component based architecture model.
 
-## Wireframe
+### Wireframe
 
 I have made some notes on the initial wireframe to give an idea of how I started to split the page up conceptually in terms of:
 
@@ -23,7 +23,7 @@ I have made some notes on the initial wireframe to give an idea of how I started
 
 ![Wireframe](src/img/km-reddit-wireframe.png)
 
-## Project Structure
+### Project Structure
 
 - **api/redditApi.js**: Contains functions for making API requests to Reddit.
 - **components/Footer.js**: The footer component.
@@ -35,7 +35,7 @@ I have made some notes on the initial wireframe to give an idea of how I started
 - **App.css**: Contains styles for the application.
 - **index.js**: Entry point for the React application.
 
-## Next Steps
+### Next Steps
 
 Run the project locally by cloning it, installing packages and running the React server.
 
