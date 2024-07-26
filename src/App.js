@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import RedditPosts from './components/RedditPosts';
 
 function App() {
+  const [selectedSubreddit, setSelectedSubreddit] = useState(null);
+
+  const handleSubredditClick = (subreddit) => {
+    setSelectedSubreddit(subreddit);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="content">
+        <Sidebar onSubredditClick={handleSubredditClick} />
+        <main>
+          {selectedSubreddit ? (
+            <RedditPosts subreddit={selectedSubreddit} />
+          ) : (
+            <div>Select a subreddit to view posts</div>
+          )}
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
